@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        <script>
+        $(document).keypress(function(e) {
+            jcmp.CallEvent('KeyPress', e.which * 1);
+        });
+        $(document).keyup(function(e) {
+            jcmp.CallEvent('KeyUp', e.which * 1);
+        });
+        $(document).keydown(function(e) {
+            jcmp.CallEvent('KeyDown', e.which * 1);
+        });
+        </script>
+    </body>
+</html>
