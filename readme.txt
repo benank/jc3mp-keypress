@@ -13,3 +13,14 @@ jcmp.ui.AddEvent('KeyUp', key => {
 })
 
 The above script would check if the player pressed the "U" key.
+
+
+If you want to not check for keys when chat is active, use the following.
+
+let can_use = true;
+
+jcmp.ui.AddEvent('chat_input_state', s => {
+  can_use = !s;
+});
+
+And then add an if statement to see if can_use is true.
