@@ -2,15 +2,15 @@
 <html>
     <body>
         <script>
-        $(document).keypress(function(e) {
-            jcmp.CallEvent('KeyPress', e.which * 1);
-        });
-        $(document).keyup(function(e) {
-            jcmp.CallEvent('KeyUp', e.which * 1);
-        });
-        $(document).keydown(function(e) {
-            jcmp.CallEvent('KeyDown', e.which * 1);
-        });
+        document.onkeydown = (e) => {
+            jcmp.CallEvent('KeyDown', e.keyCode);
+        };
+        document.onkeypress = (e) => {
+            jcmp.CallEvent('KeyPress', e.keyCode);
+        };
+        document.onkeyup = (e) => {
+            jcmp.CallEvent('KeyUp', e.keyCode);
+        };
         </script>
     </body>
 </html>
